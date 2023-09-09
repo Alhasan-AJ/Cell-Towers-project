@@ -1,35 +1,15 @@
-<!-- <div class="container">
-  <div class="row">
-    <div class="table-responsive">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th *ngFor="let property of cell_towers[0] | keyvalue">{{ property.key }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let tower of cell_towers; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td *ngFor="let property of tower | keyvalue">{{ property.value }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-md-12 text-center">
-      <ul class="pagination pagination-lg pager" id="myPager"></ul>
-    </div>
-  </div>
-</div> -->
 <div class="col-md-12 table-responsive">
 
+  <!-- MatFormField for the search input -->
   <mat-form-field style="width: 40%;">
     <input matInput #input (keyup) ="searchEngine($event)" placeholder="Search..">
   </mat-form-field>
   
+  <!-- Table to display cell tower data -->
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-      <ng-container matColumnDef="tower_id">
+    
+     <!-- Define columns for the table -->
+    <ng-container matColumnDef="tower_id">
       <th mat-header-cell *matHeaderCellDef > Tower ID</th>
       <td mat-cell *matCellDef="let element"> {{element.tower_id}} </td>
     </ng-container>
@@ -81,10 +61,13 @@
          <a [routerLink]="['/towerdetails', element.tower_id]">View Details</a></td>
     </ng-container>
   
+
+    <!-- Define header row and data rows -->
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
+  <!--Paginator for pagunation control-->
   <mat-paginator [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons></mat-paginator>
 </div>
 

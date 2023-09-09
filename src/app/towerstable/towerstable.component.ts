@@ -13,6 +13,7 @@ import { CelltowerdataService } from '../service/cell-towers-data.service';
 })
 
 export class TowerstableComponent implements OnInit {
+  // Array to store cell tower data
   cell_towers: Towers[] = [];
 
   constructor(
@@ -22,10 +23,14 @@ export class TowerstableComponent implements OnInit {
     this.getAllCellTowers(); 
   }
 
+  // MatTableDataSource to manage and display data in a table.
   dataSource = new MatTableDataSource<Towers>();
+
+  // ViewChild references for paginator and search input.
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild('input') searchInput:any
 
+  // fetch all the cell towers data from the service 
   public getAllCellTowers(): void {
     this.cellTowersService.getAllCellTowers().subscribe(
       (response: any[]) => {
@@ -39,10 +44,13 @@ export class TowerstableComponent implements OnInit {
     );
   }
 
+  // fucntion used to filter data based to user input (search engine)
   searchEngine(event: Event) : void{
     const filterData = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterData.trim().toLowerCase();
+    this.dataSource.filter = filterData.trim().toLowerCase();  //make search function case-insensitive 
   }
+
+  // these are the columns to be diplayed in the table
   displayedColumns: string[] = ['tower_id', 'operator', 'address', 'height', 'tower_type', 'latitude', 'longitude', 'technology','tower_details'];
 }
 
