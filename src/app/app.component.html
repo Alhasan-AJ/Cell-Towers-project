@@ -1,71 +1,110 @@
-<!-- <div *ngFor="let tower of cell_towers">
-  <h4>{{ tower.tower_id }}</h4>
-  <p>{{ tower.operator }}</p>
-  <p>{{ tower.address }}</p>
-  <p>{{ tower.height }}</p>
-  <p>{{ tower.tower_type }}</p>
-  <p>{{ tower.latitude }}</p>
-  <p>{{ tower.longitude }}</p>
-  <p>{{ tower.technology }}</p>
+
+
+<!-- <nav>
+  <ul>
+  <li><a routerLink="">Home</a></li>
+  <li><a routerLink="towerschart">Chart</a></li>
+  </ul>
+</nav> -->
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="tower_id">
+    <th mat-header-cell *matHeaderCellDef> Tower ID</th>
+    <td mat-cell *matCellDef="let element"> {{element.tower_id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="operator">
+    <th mat-header-cell *matHeaderCellDef> Network Operator </th>
+    <td mat-cell *matCellDef="let element"> {{element.operator}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> Address </th>
+    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="height">
+    <th mat-header-cell *matHeaderCellDef> Height </th>
+    <td mat-cell *matCellDef="let element"> {{element.height}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tower_type">
+    <th mat-header-cell *matHeaderCellDef> Tower Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.tower_type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="latitude">
+    <th mat-header-cell *matHeaderCellDef> Latitude </th>
+    <td mat-cell *matCellDef="let element"> {{element.latitude}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="longitude">
+    <th mat-header-cell *matHeaderCellDef> Longitude </th>
+    <td mat-cell *matCellDef="let element"> {{element.longitude}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="technology">
+    <th mat-header-cell *matHeaderCellDef> Technology </th>
+    <td mat-cell *matCellDef="let element"> {{element.technology}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+  </router-outlet>
 </div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-<div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>tower_id</th>
-                        <th>operator</th>
-                        <th>address</th>
-                        <th>height</th>
-                        <th>Tower Type</th>
-                        <th>Latitude</th>
-                        <th>longitude</th>
-                        <th>technology</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><div *ngFor="let tower of cell_towers">
-                        <td>{{ tower.tower_id }}</td>
-                        <td>{{ tower.operator }}</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td class="toggleDisplay">Td 1</td>
-                        <td class="toggleDisplay">Td 2</td>
-                        <td class="toggleDisplay">Td 3</td>
-                        <td class="toggleDisplay">Td 4</td>
-                      </div>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td class="toggleDisplay">Td 1</td>
-                        <td class="toggleDisplay">Td 2</td>
-                        <td class="toggleDisplay">Td 3</td>
-                        <td class="toggleDisplay">Td 4</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td class="toggleDisplay">Td 1</td>
-                        <td class="toggleDisplay">Td 2</td>
-                        <td class="toggleDisplay">Td 3</td>
-                        <td class="toggleDisplay">Td 4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/parent">Cell Towers app</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/towerstable">Table View</a></li>
+        <li><a href="/towerschart">Chart View</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
-</div>
+</body>
+</html>
+
+<!-- <header>
+  <h1>My Cell Towers App</h1>
+</header>
+
+<nav>
+  <nav>
+    <a routerLink="/towerstable">Table View</a>
+    <a routerLink="/towerschart">Chart View</a>
+  </nav>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+  Footer content goes here 
+</footer>-->
+

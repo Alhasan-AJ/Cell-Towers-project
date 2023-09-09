@@ -1,0 +1,91 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th *ngFor="let property of cell_towers[0] | keyvalue">{{ property.key }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tower of cell_towers; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td *ngFor="let property of tower | keyvalue">{{ property.value }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-12 text-center">
+      <ul class="pagination pagination-lg pager" id="myPager"></ul>
+    </div>
+  </div>
+</div> -->
+<div class="col-md-12 table-responsive">
+
+  <mat-form-field style="width: 40%;">
+    <input matInput #input (keyup) ="searchEngine($event)" placeholder="Search..">
+  </mat-form-field>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="tower_id">
+      <th mat-header-cell *matHeaderCellDef > Tower ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.tower_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="operator">
+      <th mat-header-cell *matHeaderCellDef> Network Operator </th>
+      <td mat-cell *matCellDef="let element"> {{element.operator}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="height">
+      <th mat-header-cell *matHeaderCellDef> Height </th>
+      <td mat-cell *matCellDef="let element"> {{element.height}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="tower_type">
+      <th mat-header-cell *matHeaderCellDef> Tower Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.tower_type}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="latitude">
+      <th mat-header-cell *matHeaderCellDef> Latitude </th>
+      <td mat-cell *matCellDef="let element"> {{element.latitude}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="longitude">
+      <th mat-header-cell *matHeaderCellDef> Longitude </th>
+      <td mat-cell *matCellDef="let element"> {{element.longitude}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="technology">
+      <th mat-header-cell *matHeaderCellDef> Technology </th>
+      <td mat-cell *matCellDef="let element"> {{element.technology}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tower_details">
+      <th mat-header-cell *matHeaderCellDef> Tower Details </th>
+      <td mat-cell *matCellDef="let element">
+         <a [routerLink]="['/towerdetails', element.tower_id]">View Details</a></td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons></mat-paginator>
+</div>
+
+  

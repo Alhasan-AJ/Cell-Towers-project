@@ -1,0 +1,53 @@
+[
+    {
+      "tower_id": 39019,
+      "operator": "Verizon",
+      "address": "5247 Hudson Road",
+      "height": 46.6,
+      "tower_type": "TOWER",
+      "latitude": 42.68380556,
+      "longitude": -83.39205556,
+      "technology": "4G"
+    },
+    {
+      "tower_id": 39020,
+      "operator": "AT&T",
+      "address": "123 Main Street",
+      "height": 55.2,
+      "tower_type": "TOWER",
+      "latitude": 41.91234567,
+      "longitude": -87.654321,
+      "technology": "5G"
+    },
+    {
+      "tower_id": 39021,
+      "operator": "T-Mobile",
+      "address": "789 Elm Avenue",
+      "height": 38.7,
+      "tower_type": "ROOFTOP",
+      "latitude": 35.56789012,
+      "longitude": -80.12345678,
+      "technology": "3G"
+    },
+    {
+      "tower_id": 39022,
+      "operator": "Sprint",
+      "address": "432 Park Lane",
+      "height": 62.1,
+      "tower_type": "TOWER",
+      "latitude": 38.98765432,
+      "longitude": -77.543210,
+      "technology": "4G"
+    },
+    {
+      "tower_id": 39023,
+      "operator": "Verizon",
+      "address": "987 Willow Street",
+      "height": 50.5,
+      "tower_type": "ROOFTOP",
+      "latitude": 37.12345678,
+      "longitude": -85.87654321,
+      "technology": "5G"
+    }
+  ]
+  

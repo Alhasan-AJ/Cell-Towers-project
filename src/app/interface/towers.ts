@@ -7,5 +7,6 @@ export interface Towers {
     latitude: number;
     longitude: number;
     technology: string;
+    tower_details: string;
 
 }
