@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-  showTableView = true;
+  showTableView = true;   //by default it will show the table view
   showChartView = false;
 
+  // method used to switch between the two views (table && chart)
   toggleView() {
     this.showTableView = !this.showTableView;
     this.showChartView = !this.showChartView

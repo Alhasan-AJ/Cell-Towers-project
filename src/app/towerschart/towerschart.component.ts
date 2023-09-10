@@ -23,7 +23,7 @@ export class TowerschartComponent implements AfterViewInit {
     this.canvas = this.barChart.nativeElement;
     this.ctx = this.canvas.getContext('2d');
 
-    // Fetch tower data and count towers by technology
+    // Fetch cell tower data and count towers by technology
     this.celltowerdataService.getAllCellTowers().subscribe((data) => {
       this.towerCounts = this.celltowerdataService.getNumberOfTowers(data);
 

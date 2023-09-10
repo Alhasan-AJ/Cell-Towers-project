@@ -27,12 +27,12 @@ export class TowerstableComponent implements OnInit {
 
   // ViewChild references for paginator and search input.
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild('input') searchInput:any
+  @ViewChild('input') searchInput!: Towers;
 
   // fetch all the cell towers data from the service 
   public getAllCellTowers(): void {
     this.cellTowersService.getAllCellTowers().subscribe(
-      (response: any[]) => {
+      (response: Towers[]) => {
         this.cell_towers = response;
         this.dataSource = new MatTableDataSource(this.cell_towers);
         this.dataSource.paginator = this.paginator
