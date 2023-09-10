@@ -15,7 +15,7 @@ export class CelltowerdataService {
   public getAllCellTowers(): Observable<Towers[]> {
     const apiUrl = `${this.apiUrl}/towers`; 
     //was implemented for testing
-    const jsonFile = 'assets/cell-towers.json'
+    //const jsonFile = 'assets/cell-towers.json'
     return this.http.get<any[]>(apiUrl);
   }
 
@@ -33,9 +33,10 @@ export class CelltowerdataService {
 }
 
 // this was implemented for the approach of achieving the bonus requirement (Tower Details page)
-// public getTowerDetails(id: string): Observable<any> {
-//   const apiUrl = `${this.apiUrl}/towers/${id}`; // Corrected apiUrl
+// public getTowerDetails(tower_id: number): Observable<any> {
+//   const apiUrl = `${this.apiUrl}/towers/${tower_id}`; // Corrected apiUrl
 //   return this.http.get<Towers>(apiUrl);
 // }
+
 }
 

@@ -111,9 +111,9 @@ public class TowerController {
   }
 }
 
-// This endpoint was created to attempt retrieving the cell towers data by tower_id
+// This endpoint was created to attempt retrieving the cell towers data by tower_id, but It did not work
 //    @GetMapping("/towers/{tower_id}")
-//    public ResponseEntity<Object> getTowerDetails(@PathVariable Long tower_id){
+//    public ResponseEntity<Object> getTowerDetails(@PathVariable Integer tower_id){
 //        String url="https://x8ki-letl-twmt.n7.xano.io/api:jjKtx4O-/api/v2/towers/"+tower_id;
 //
 //        RestTemplate restTemplate = new RestTemplate();

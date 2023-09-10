@@ -16,12 +16,15 @@ export class TowerdetailsComponent implements OnInit {
     private cellTowersService: CelltowerdataService
   ) {}
 
-  ngOnInit(): void {
-  //     const towerID= this.route.snapshot.paramMap.get('id')
-  //     console.warn(towerID)
-  //     towerID && this.cellTowersService.getTowerDetails(towerID).subscribe((data)=>{
-  //       console.warn(data)
-  //     })
+  ngOnInit(): void {}
+  //   const towerID = +this.route.snapshot.paramMap.get('tower_id'); // Use the + operator to convert to a number
+  //   console.warn(towerID);
+  //   if (!isNaN(towerID)) { // Check if towerID is a valid number
+  //     this.cellTowersService.getTowerDetails(towerID).subscribe((data) => {
+  //       console.warn(data);
+  //     });
+  //   } else {
+  //     console.error('Invalid towerID:', towerID);
+  //   }
   // }
-}
-}
+  }
