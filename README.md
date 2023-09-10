@@ -1,6 +1,6 @@
 # CellTowerFull-Stack
 
-A full stack application that uses the telecom company's API endpoint to filter and visualize the data. The provided API endpoint from the company contains information on hundreds of cell towers, including their tower id, network operator, technology (2G, 3G, 4G, or 5G), latitude, and longitude. The application
+A full stack application that uses the telecom company's API endpoint to filter and visualize the cell towers data. The provided API endpoint from the company contains information on hundreds of cell towers, including their tower id, network operator, technology (2G, 3G, 4G, or 5G), latitude, and longitude. The application
 is built to consume the API and visualize the data.
 
 
@@ -39,5 +39,6 @@ While implementing this project, I encountered several limitations, these are:
 
 - The limited knowledge of working on the spring boot framework and basic foundations of Java language. This required additional learning and research to effectively use these technologies in the project. 
 - This project marked my initial experience with building an application using Angular. Consequently, I needed some time to acquire the necessary skills and understanding of Angular's features and best practices.
-- Time constraints which has prevented me from fully developing and refining certain aspects of the project as I would preferred
+- Time constraints which has prevented me from fully developing and refining certain aspects of the project as I would preferred.
 
+However, it was a valuable experience building this application, and I've gained a lot from it. I'm committed to ongoing learning and exploration as I continue to grow and develop my skills.
