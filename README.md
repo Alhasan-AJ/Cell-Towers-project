@@ -24,9 +24,9 @@ The backend application could be found in the folder that is called `consumingEx
 The frontend application was implemented  using the Angular CLI. A service called `CelltowerdataService` was created to retrieve all the cell towers from the backend API.
 
 Three components were generated to preform certain tasks:
-- `parent.component` is used to displays both the table view (table component and the chart view(chart component).
+- `parent.component` is used to displays both the table view (table component and chart component).
 - `towerstable.component` is used to display all the cell towers data in a table. This was implemented by using `MatTableDataSource`, imported from Angular Material library.
-- `towerschart.component` is used to display the total number of cell towers for each technology (5G, 4G, 3G, 2G). This was implemented by using the chart.js library
+- `towerschart.component` is used to display the total number of cell towers for each technology (5G, 4G, 3G, 2G). This was implemented by using the `chart.js` library
 
 The remaining files in the repository (except than the `consumingExternalAPIs` folder) are related to the angular application.
 
@@ -34,5 +34,10 @@ The remaining files in the repository (except than the `consumingExternalAPIs` f
 
 After you clone the project, naviagte to the diretcory where you cloned the project, then in the terminal run `npm install`, followed by `npm start` to start the application. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. 
 
+# Limitaions
+While implementing this project, I encountered several limitations, these are:
 
+- The limited knowledge of working on the spring boot framework and basic foundations of Java language. This required additional learning and research to effectively use these technologies in the project. 
+- This project marked my initial experience with building an application using Angular. Consequently, I needed some time to acquire the necessary skills and understanding of Angular's features and best practices.
+- Time constraints which has prevented me from fully developing and refining certain aspects of the project as I would preferred
 
