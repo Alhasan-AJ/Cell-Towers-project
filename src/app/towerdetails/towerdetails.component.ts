@@ -15,10 +15,11 @@ export class TowerdetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-      const towerID= this.route.snapshot.paramMap.get('id')
-      console.warn(towerID)
-      towerID && this.cellTowersService.getTowerDetails(towerID).subscribe((data)=>{
-        console.warn(data)
-      })
-  }
+  //     const towerID= this.route.snapshot.paramMap.get('id')
+  //     console.warn(towerID)
+  //     towerID && this.cellTowersService.getTowerDetails(towerID).subscribe((data)=>{
+  //       console.warn(data)
+  //     })
+  // }
+}
 }
