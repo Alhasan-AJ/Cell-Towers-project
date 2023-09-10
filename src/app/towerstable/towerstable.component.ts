@@ -2,7 +2,6 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatFormField, MatFormFieldAppearance } from '@angular/material/form-field';
 import { Towers } from '../interface/towers';
 import { CelltowerdataService } from '../service/cell-towers-data.service';
 
@@ -44,8 +43,8 @@ export class TowerstableComponent implements OnInit {
     );
   }
 
-  // fucntion used to filter data based to user input (search engine)
-  searchEngine(event: Event) : void{
+  // fucntion used to filter data based to the user input (search engine)
+  public searchEngine(event: Event) : void{
     const filterData = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterData.trim().toLowerCase();  //make search function case-insensitive 
   }

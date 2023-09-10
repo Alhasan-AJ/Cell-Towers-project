@@ -1,3 +1,5 @@
+//This component was created for the approach to achieve the bonus requirement 
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CelltowerdataService } from '../service/cell-towers-data.service';

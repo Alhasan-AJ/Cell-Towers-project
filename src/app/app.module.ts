@@ -10,7 +10,6 @@ import { MatInputModule } from '@angular/material/input'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CelltowerdataService } from './service/cell-towers-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TowerschartComponent } from './towerschart/towerschart.component';
 import { TowerstableComponent } from './towerstable/towerstable.component';

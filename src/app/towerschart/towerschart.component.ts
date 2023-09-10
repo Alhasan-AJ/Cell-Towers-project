@@ -37,7 +37,7 @@ export class TowerschartComponent implements AfterViewInit {
   }
 
   // function to create the chart for the number of towers by technology
-  creatTowersChart(): void {
+  public creatTowersChart(): void {
     const customLabels = ["5G","4G","3G","2G"];
     new Chart(this.ctx, {
       type: 'bar',

@@ -31,12 +31,11 @@ export class CelltowerdataService {
   });
   return counts; 
 }
+// this was implemented for the approach of achieving the bonus requirement (Tower Details page)
 
 // public getTowerDetails(id: string): Observable<any> {
 //   const apiUrl = `${this.apiUrl}/towers/${id}`; // Corrected apiUrl
 //   return this.http.get<Towers>(apiUrl);
 // }
-
-
 }
 
